@@ -1,0 +1,10 @@
+body {
+	background-color: #f00;
+}
+
+td, th {
+	padding: 3px;
+}
+h1 {
+	padding-left: 15px;
+}

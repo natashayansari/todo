@@ -1,0 +1,41 @@
+<h3>Listing chores</h3>
+
+<table>
+  
+  <tr>
+    <th class="col-md-2">Chore</th>
+    <th class="col-md-2">Date</th>
+    <th class="col-md-2">Completed?</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  
+<% @chores.each do |chore| %>
+  <tr>
+    <td class="col-md-2"><%= chore.ch_name %></td>
+    <td class="col-md-2"><%= chore.ch_date %></td>
+    <td class="col-md-2"><%= chore.ch_completed %></td>
+    <td>
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Choose...
+        <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <li><%= link_to 'Show', chore %></li>
+          <li><%= link_to 'Edit', edit_chore_path(chore) %></li>
+          <li><%= link_to 'Destroy', chore, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          <li role="separator" class="divider"></li>
+          <li><%= link_to 'About', controller: 'about', action: 'index' %></li>
+
+        </ul>
+      </div>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Chore', new_chore_path %>

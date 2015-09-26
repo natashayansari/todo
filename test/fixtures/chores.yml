@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ch_name: MyString
+  ch_date: 2015-09-23
+  ch_completed: false
+
+two:
+  ch_name: MyString
+  ch_date: 2015-09-23
+  ch_completed: false
